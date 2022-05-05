@@ -75,6 +75,8 @@ namespace rs_lutwo_game
 
             Console.WriteLine("=> Seventh encounter...");
             Console.WriteLine("This is your seventh fight!");
+            Player d_f = new Enemy();
+            Console.WriteLine(d_f);
 
             Console.WriteLine("\n////////// ////////// ////////// ////////// //////////");
 
@@ -142,7 +144,9 @@ namespace rs_lutwo_game
             if (Player_HP > 0)
             {
                 Console.WriteLine("Congratulations, you have won!");
-                ////////////
+                // poniższa instrukcja prowadzi do ostatniej stworzonej klasy do gry
+                Congratulations.Congratulations_You_Did_It(); // zawiera 2 instrukcje [ gratulacje ]
+                                                              // [ odniesienie do klasy Congratulations ]
             }
             else
             {

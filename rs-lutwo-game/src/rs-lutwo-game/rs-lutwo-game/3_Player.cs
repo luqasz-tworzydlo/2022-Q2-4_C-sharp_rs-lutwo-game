@@ -12,6 +12,8 @@ namespace rs_lutwo_game
         public string SecondName = "Protector";
         public string YourTitle = "God's Warrior";
 
+        public string ENM = "Dragon";
+
         public string Properties_PA_E
         {
             get;

@@ -10,12 +10,12 @@ namespace rs_lutwo_game
     {
         static void Main(string[] args)
         {
-            //The_Beginning(); // zawiera 3 instrukcje
+            The_Beginning(); // zawiera 3 instrukcje
             // kolejna klasa zawiera 7 instrukcji ( ukryte w klasie The_Beggining )
             // jeszcze kolejna klasa zawiera 5 instrukcji ( dotyczy klasy Main_Quest_A )
             // w jeszcze innej klasie zawierają się 4 instrukcje ( dotyczy klasy Main_Quest_B )
             // ostatnia klasa Main_Quest zawieraja w sobie 3 instrukcje ( dotyczy klasy Main_Quest_C )
-            Main_Quest_C.The_Final_Encounter();
+            // na końcu jest jeszcze klasa z gratulacjami, jak i z możliwością powtórki gry ( klasa Congratulations_You_Did_It )
 
             Console.ReadKey();
         }

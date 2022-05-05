@@ -8,7 +8,6 @@ namespace rs_lutwo_game
 {
     internal class Main_Quest_B
     {
-
         // niniejsza klasa Main_Quest_B zawiera kolejne 4 instrukcje
         // [tj. Heal_Improved, FourthFight, FifthFight, SixthFight],
         // które są kontynuacją właściwej rozgrywki w grze
@@ -21,9 +20,9 @@ namespace rs_lutwo_game
             Console.WriteLine("\n////////// ////////// ////////// ////////// //////////\n");
 
             Console.WriteLine("Press any key to continue...\n");
-            string TQ;
-            TQ = Convert.ToString(Console.ReadLine());
-            switch (TQ)
+            string MQ2;
+            MQ2 = Convert.ToString(Console.ReadLine());
+            switch (MQ2)
             {
                 default:
                     FourthFight(); break;
@@ -79,7 +78,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 2);
 
@@ -157,7 +156,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 2);
 
@@ -235,7 +234,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 2);
 
@@ -255,7 +254,9 @@ namespace rs_lutwo_game
             if (Player_HP > 0)
             {
                 Console.WriteLine("Congratulations, you defeated the sixth enemy!");
-                //SeventhFight();
+                // poniższa instrukcja prowadzi do ostatniej klasy Main_Quest
+                Main_Quest_C.SeventhFight(); // zawiera 3 instrukcje [ końcówka gry ]
+                                             // [ odniesienie do klasy Main_Quest_C ]
             }
             else
             {
@@ -263,83 +264,5 @@ namespace rs_lutwo_game
                 Main_Quest_A.TheEnd();
             }
         }
-        /*public static void SeventhFight()
-        {
-            Console.WriteLine("\n////////// ////////// ////////// ////////// //////////\n");
-
-            Console.WriteLine("=> Seventh encounter...");
-            Console.WriteLine("This is your seventh fight!");
-
-            Console.WriteLine("\n////////// ////////// ////////// ////////// //////////");
-
-            // poniżej jest implementacja zdrowia, siły ataku oraz leczenia
-            int Player_HP = 50;
-            int Enemy_HP = 35;
-            int Player_Attack = 5 + 2;
-            int Enemy_Attack = 7;
-            int Heal_HP_Amount = 5;
-
-            // *** do wykonana operacji losowejprzez przeciwnika
-            Random random = new Random();
-
-            while (Player_HP > 0 && Enemy_HP > 0)
-            {
-                // ruch gracza, może zaatakować przeciwnika, leczyć się lub nic nie robić
-                Console.WriteLine("\n--- --- --- --- --- --- --- --- --- --- --- ---");
-                Console.WriteLine("<--| <> | Player Turn | <> |-->");
-                Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
-                Console.WriteLine("\nEnter 'A' to attack or 'H' to heal.");
-
-                string choice = Console.ReadLine();
-
-                if (choice == "A")
-                {
-                    Enemy_HP -= Player_Attack;
-                    Console.WriteLine("\nPlayer attacks and deals " + Player_Attack + " damage!");
-                    Console.WriteLine("--- --- --- --- --- --- --- --- --- --- --- ---\n");
-                }
-                else if (choice == "H")
-                {
-                    Console.WriteLine("\nPlayer restores " + Heal_HP_Amount + " health points!");
-                    Player_HP += Heal_HP_Amount;
-                    Console.WriteLine("--- --- --- --- --- --- --- --- --- --- --- ---\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nWhat a shame... you did nothing! :<");
-                    Console.WriteLine("--- --- --- --- --- --- --- --- --- --- --- ---\n");
-                }
-
-                // ruch przeciwnika, wroga - może atakować lub się leczyć
-                if (Enemy_HP > 0)
-                {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
-                    Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
-                    int enemyChoice = random.Next(0, 1);
-
-                    if (enemyChoice == 0)
-                    {
-                        Player_HP -= Enemy_Attack;
-                        Console.WriteLine("\nEnemy attacks and deals " + Enemy_Attack + " damage!");
-                    }
-                    else
-                    {
-                        Enemy_HP += Heal_HP_Amount;
-                        Console.WriteLine("\nEnemy restores " + Heal_HP_Amount + " health points!");
-                    }
-                }
-            }
-
-            if (Player_HP > 0)
-            {
-                Console.WriteLine("Congratulations, you have won!");
-                ////////////
-            }
-            else
-            {
-                Console.WriteLine("\nYou lose! ;<\n");
-                Main_Quest_A.TheEnd();
-            }
-        }*/
     }
 }

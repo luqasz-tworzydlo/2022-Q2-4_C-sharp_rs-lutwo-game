@@ -35,9 +35,9 @@ namespace rs_lutwo_game
             Console.WriteLine("////////// ////////// ////////// ////////// //////////\n");
 
             Console.WriteLine("Press any key to continue...\n");
-            string TQ;
-            TQ = Convert.ToString(Console.ReadLine());
-            switch (TQ)
+            string MQ1;
+            MQ1 = Convert.ToString(Console.ReadLine());
+            switch (MQ1)
             {
                 default:
                     FirstFight(); break;
@@ -94,7 +94,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 1);
 
@@ -172,7 +172,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 1);
 
@@ -250,7 +250,7 @@ namespace rs_lutwo_game
                 // ruch przeciwnika, wroga - może atakować lub się leczyć
                 if (Enemy_HP > 0)
                 {
-                    Console.WriteLine("<--| >< | Enemy turn | >< |-->");
+                    Console.WriteLine("<--| >< | Enemy Turn | >< |-->");
                     Console.WriteLine("Player HP - " + Player_HP + ". Enemy HP - " + Enemy_HP);
                     int enemyChoice = random.Next(0, 1);
 
@@ -270,7 +270,9 @@ namespace rs_lutwo_game
             if (Player_HP > 0)
             {
                 Console.WriteLine("Congratulations, you defeated the third enemy!");
-                Main_Quest_B.Heal_Improved();
+                // poniższa instrukcja do innej klasy jest kontynuacją niniejszej
+                Main_Quest_B.Heal_Improved(); // zawiera 4 instrukcji [ w ramach kontynuacji ]
+                                              // [ odniesienie do klasy Main_Quest_B ]
             }
             else
             {

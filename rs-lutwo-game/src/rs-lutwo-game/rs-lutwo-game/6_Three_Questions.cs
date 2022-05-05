@@ -262,7 +262,7 @@ namespace rs_lutwo_game
                         default:
                             // poniższa instrukcja powoduje rozpoczęcie wykonywania instrukcji z innej klasy
                             Main_Quest_A.Before_A_Fight(); // zawiera 5 instrukcji [ w ramach kontynuacji ]
-                                                           // [ odniesienie do klasy Main_Quest]
+                                                           // [ odniesienie do klasy Main_Quest_A ]
                             break;
                     }
                     break;

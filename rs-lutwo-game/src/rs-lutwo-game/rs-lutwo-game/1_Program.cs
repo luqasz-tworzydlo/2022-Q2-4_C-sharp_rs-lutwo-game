@@ -12,9 +12,10 @@ namespace rs_lutwo_game
         {
             //The_Beginning(); // zawiera 3 instrukcje
             // kolejna klasa zawiera 7 instrukcji ( ukryte w klasie The_Beggining )
-            // jeszcze kolejna klasa zawiera 5 instrukcji ( dotyczy klasy Main_Quest )
-            //Main_Quest_A.Before_A_Fight();
-            Main_Quest_B.Heal_Improved();
+            // jeszcze kolejna klasa zawiera 5 instrukcji ( dotyczy klasy Main_Quest_A )
+            // w jeszcze innej klasie zawierają się 4 instrukcje ( dotyczy klasy Main_Quest_B )
+            // ostatnia klasa Main_Quest zawieraja w sobie 3 instrukcje ( dotyczy klasy Main_Quest_C )
+            Main_Quest_C.The_Final_Encounter();
 
             Console.ReadKey();
         }

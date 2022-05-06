@@ -21,10 +21,34 @@ namespace rs_lutwo_game
         }
         static void The_Beginning()
         {
+            // poniżej jest kilka słów od autora gry ( Łukasz W. Tworzydło ) :>
+            A_Little_Bit_About_Myself();
             // trzy instrukcje, pierwotnie zaimplementowane w klasie Program
             // zostały przeniesione do nowej klasy, nazwanej Beginning
             // [ zrobiono to w celu lepszej przejrzystości kodu ]
             Beginning.Start_End_Game();
+        }
+        static void A_Little_Bit_About_Myself()
+        {
+            Console.WriteLine("I warmly welcome you to my game (RS LUTWO GAME) ! ;>\n");
+
+            Console.WriteLine("My name is Lukasz W. Tworzydlo ... I'm an IT student. ^;^\n");
+
+            Console.WriteLine("This is the first game I programmed in Microsoft Visual Studio Community 2022." +
+                "\n... and for this game, I used the C# programming language. :P\n");
+
+            Console.WriteLine("Maybe it's nothing special, but I hope you will enjoy it. :>>>");
+
+            Console.WriteLine("\n////////// ////////// ////////// ////////// //////////\n");
+
+            Console.WriteLine("Press any key to continue...\n");
+            string SNG;
+            SNG = Convert.ToString(Console.ReadLine());
+            switch (SNG)
+            {
+                default:
+                    break;
+            }
         }
     }
 }

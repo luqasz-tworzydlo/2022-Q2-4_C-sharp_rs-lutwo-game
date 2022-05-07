@@ -10,6 +10,7 @@ namespace rs_lutwo_game
     {
         static void Main(string[] args)
         {
+            
             The_Beginning(); // zawiera 3 instrukcje
             // kolejna klasa zawiera 7 instrukcji ( ukryte w klasie The_Beggining )
             // jeszcze kolejna klasa zawiera 5 instrukcji ( dotyczy klasy Main_Quest_A )

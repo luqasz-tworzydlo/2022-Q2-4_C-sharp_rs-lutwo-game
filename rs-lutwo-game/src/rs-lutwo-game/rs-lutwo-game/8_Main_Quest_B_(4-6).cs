@@ -255,8 +255,8 @@ namespace rs_lutwo_game
             {
                 Console.WriteLine("Congratulations, you defeated the sixth enemy!");
                 // poniższa instrukcja prowadzi do ostatniej klasy Main_Quest
-                Main_Quest_C.SeventhFight(); // zawiera 3 instrukcje [ końcówka gry ]
-                                             // [ odniesienie do klasy Main_Quest_C ]
+                Main_Quest_C.The_Final_Encounter(); // zawiera 3 instrukcje [ końcówka gry ]
+                                                    // [ odniesienie do klasy Main_Quest_C ]
             }
             else
             {
